@@ -1,6 +1,6 @@
 # KarlsruheMIS -- Maximum Independent Sets at Scale
 
-We develop scalabe algorithms for the **Maximum Independent Set (MIS)** and **Maximum Weight Independent Set (MWIS)** problems on large sparse graphs.
+We develop scalable algorithms for the **Maximum Independent Set (MIS)** and **Maximum Weight Independent Set (MWIS)** problems on large sparse graphs.
 
 ---
 
