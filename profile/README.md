@@ -6,11 +6,11 @@ We develop scalable algorithms for **independence problems on graphs**: Maximum 
 
 ## The Problems
 
-An **independent set** of a graph is a set of vertices with no two vertices adjacent. The **Maximum Independent Set (MIS)** problem asks for the largest such set; the **Maximum Weight Independent Set (MWIS)** problem generalizes this by assigning weights to vertices and maximizing total weight.
+An **independent set** of a graph is a set of vertices with no two vertices adjacent. The **Maximum Independent Set (MIS)** problem asks for the largest such set; the **Maximum Weight Independent Set (MWIS)** problem generalizes this by assigning weights to vertices and maximizing total weight. The closely related **Vertex Cover** problem asks for the smallest set of vertices that touches every edge — its complement is a maximum independent set.
 
 A **2-packing set** strengthens the independence condition: no two vertices in the set may share a common neighbor (i.e., they must be at distance at least 3). Finding a maximum 2-packing set is NP-hard and closely related to MIS — our solvers reduce it to an equivalent independent set instance after applying specialized data reduction rules.
 
-The closely related **Vertex Cover** problem asks for the smallest set of vertices that touches every edge — its complement is a maximum independent set.
+
 
 All these problems are NP-hard and among the hardest in practice. Large sparse graphs with millions of vertices, as they arise in network analysis, computational biology, and route planning, make exact and near-exact solutions especially challenging.
 
