@@ -53,6 +53,12 @@ git clone https://github.com/KarlsruheMIS/LearnAndReduce.git && cd LearnAndReduc
 ./deploy/reduce_and_chils network.graph --output=solution.txt --time_limit=60
 ```
 
+### DataReductions
+```bash
+git clone https://github.com/KarlsruheMIS/DataReductions.git && cd DataReductions && make
+./mwis_reduce -g network.graph --degree_one --domination --twin -v
+```
+
 ### red2pack
 ```bash
 git clone --recursive https://github.com/KarlsruheMIS/red2pack.git && cd red2pack
