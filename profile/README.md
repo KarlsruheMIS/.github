@@ -46,6 +46,13 @@ git clone https://github.com/KarlsruheMIS/CHILS.git && cd CHILS && make
 ./CHILS -g network.graph -p 16 -t 60 -o solution.txt
 ```
 
+### LearnAndReduce
+```bash
+git clone https://github.com/KarlsruheMIS/LearnAndReduce.git && cd LearnAndReduce
+./get_dep.sh && ./compile_all.sh
+./deploy/reduce_and_chils network.graph --output=solution.txt --time_limit=60
+```
+
 ### red2pack
 ```bash
 git clone --recursive https://github.com/KarlsruheMIS/red2pack.git && cd red2pack
