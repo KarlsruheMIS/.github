@@ -70,21 +70,3 @@ git clone --recursive https://github.com/KarlsruheMIS/red2pack.git && cd red2pac
 ./deploy/red2pack_branch_and_reduce network.graph --output=packing.txt --time_limit=60
 ```
 
----
-
-## Papers
-
-- S. Lamm, P. Sanders, C. Schulz, D. Strash, R. F. Werneck. **Finding Near-Optimal Independent Sets at Scale.** ALENEX 2016. [(PDF)](https://doi.org/10.1137/1.9781611974317.12)
-- D. Hespe, C. Schulz, D. Strash. **Scalable Kernelization for Maximum Independent Sets.** ALENEX 2018. [(PDF)](https://doi.org/10.1137/1.9781611975055.16)
-- S. Lamm, C. Schulz, D. Strash, R. Williger, H. Zhang. **Exactly Solving the Maximum Weight Independent Set Problem on Large Real-World Graphs.** ALENEX 2019. [(PDF)](https://doi.org/10.1137/1.9781611975499.11)
-- D. Hespe, S. Lamm, C. Schulz, D. Strash. **WeGotYouCovered: The Winning Solver from the PACE 2019 Challenge.** CSC 2020. [(PDF)](https://doi.org/10.1137/1.9781611976229.1)
-- S. Lamm, P. Sanders, C. Schulz. **Graph Partitioning for Independent Sets.** SEA 2015. [(PDF)](https://doi.org/10.1007/978-3-319-20086-6_6)
-
-A full list of references is available in the [KaMIS documentation](https://karlsruhemis.github.io).
-
----
-
-## Contact
-
-**Heidelberg University, Institute of Computer Science**
-https://karlsruhemis.github.io
