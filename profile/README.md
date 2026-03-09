@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KarlsruheMIS/.github/main/profile/karlsruhemis-logo.png" alt="KarlsruheMIS Logo" width="256"/>
+</p>
+
 # KarlsruheMIS — Graph Independence Problems at Scale
 
 We develop scalable algorithms for **independence problems on graphs**: Maximum Independent Set (MIS), Maximum Weight Independent Set (MWIS), 2-Packing Set, and Vertex Cover.
