@@ -14,6 +14,8 @@ The closely related **Vertex Cover** problem asks for the smallest set of vertic
 
 All these problems are NP-hard and among the hardest in practice. Large sparse graphs with millions of vertices, as they arise in network analysis, computational biology, and route planning, make exact and near-exact solutions especially challenging.
 
+A key ingredient across all our solvers is **data reduction**: polynomial-time rules that shrink the input graph while preserving the optimal solution. Our [DataReductions](https://github.com/KarlsruheMIS/DataReductions) framework provides a comprehensive reference implementation of all known exact reduction rules for MWIS — usable as a standalone tool or as a library to integrate into your own solver.
+
 **Applications** include map labeling, computer vision, combinatorial auctions, coding theory, molecular docking, facility location, and any setting that reduces to finding a maximum conflict-free selection.
 
 ---
