@@ -30,19 +30,16 @@ Both problems are NP-hard, and among the hardest in practice -- they do not admi
 
 ## Quick Start
 
+### KaMIS
 ```bash
-brew tap KarlsruheMIS/kamis
-brew install kamis
+brew install KarlsruheMIS/kamis/kamis
+redumis network.graph --output independent_set.txt --time_limit 60 --console_log
 ```
 
-Or build from source:
-
+### CHILS
 ```bash
-git clone https://github.com/KarlsruheMIS/KaMIS.git
-cd KaMIS
-git submodule update --init --recursive
-./compile_withcmake.sh
-# binaries are in deploy/
+git clone https://github.com/KarlsruheMIS/CHILS.git && cd CHILS && make
+./CHILS -g network.graph -p 16 -t 60 -o solution.txt
 ```
 
 ---
