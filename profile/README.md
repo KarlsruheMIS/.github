@@ -1,14 +1,18 @@
-# KarlsruheMIS -- Maximum Independent Sets at Scale
+# KarlsruheMIS — Graph Independence Problems at Scale
 
-We develop scalable algorithms for the **Maximum Independent Set (MIS)** and **Maximum Weight Independent Set (MWIS)** problems on large sparse graphs.
+We develop scalable algorithms for **independence problems on graphs**: Maximum Independent Set (MIS), Maximum Weight Independent Set (MWIS), 2-Packing Set, and Vertex Cover.
 
 ---
 
-## The Problem
+## The Problems
 
 An **independent set** of a graph is a set of vertices with no two vertices adjacent. The **Maximum Independent Set (MIS)** problem asks for the largest such set; the **Maximum Weight Independent Set (MWIS)** problem generalizes this by assigning weights to vertices and maximizing total weight.
 
-Both problems are NP-hard, and among the hardest in practice -- they do not admit a constant-factor approximation unless P = NP. Large sparse graphs with millions of vertices, as they arise in network analysis, computational biology, and route planning, make exact and near-exact solutions especially challenging.
+A **2-packing set** strengthens the independence condition: no two vertices in the set may share a common neighbor (i.e., they must be at distance at least 3). Finding a maximum 2-packing set is NP-hard and closely related to MIS — our solvers reduce it to an equivalent independent set instance after applying specialized data reduction rules.
+
+The closely related **Vertex Cover** problem asks for the smallest set of vertices that touches every edge — its complement is a maximum independent set.
+
+All these problems are NP-hard and among the hardest in practice. Large sparse graphs with millions of vertices, as they arise in network analysis, computational biology, and route planning, make exact and near-exact solutions especially challenging.
 
 **Applications** include map labeling, computer vision, combinatorial auctions, coding theory, molecular docking, facility location, and any setting that reduces to finding a maximum conflict-free selection.
 
@@ -40,6 +44,13 @@ redumis network.graph --output independent_set.txt --time_limit 60 --console_log
 ```bash
 git clone https://github.com/KarlsruheMIS/CHILS.git && cd CHILS && make
 ./CHILS -g network.graph -p 16 -t 60 -o solution.txt
+```
+
+### red2pack
+```bash
+git clone --recursive https://github.com/KarlsruheMIS/red2pack.git && cd red2pack
+./compile_with_cmake.sh Release
+./deploy/red2pack_branch_and_reduce network.graph --output=packing.txt --time_limit=60
 ```
 
 ---
