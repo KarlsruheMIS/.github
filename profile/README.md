@@ -46,8 +46,8 @@ redumis network.graph --output independent_set.txt --time_limit 60 --console_log
 
 ### CHILS
 ```bash
-git clone https://github.com/KarlsruheMIS/CHILS.git && cd CHILS && make
-./CHILS -g network.graph -p 16 -t 60 -o solution.txt
+brew install KarlsruheMIS/chils/chils
+CHILS -g network.graph -p 16 -t 60 -o solution.txt
 ```
 
 ### LearnAndReduce
