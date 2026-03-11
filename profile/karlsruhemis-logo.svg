@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1f2e"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="50" ry="50" fill="url(#bg)"/>
+
+  <!-- Node positions:
+    Green (IS):  top(250,70), center(250,220), bottom(250,370)
+    Gray (excl): UL(120,145), UR(380,145), LL(120,295), LR(380,295)
+    No edges between green nodes.
+  -->
+
+  <!-- Graph edges -->
+  <g stroke="#3a4555" stroke-width="2" opacity="0.6">
+    <!-- Green top to gray neighbors -->
+    <line x1="250" y1="70" x2="120" y2="145"/>
+    <line x1="250" y1="70" x2="380" y2="145"/>
+    <!-- Gray upper row -->
+    <line x1="120" y1="145" x2="380" y2="145"/>
+    <!-- Gray to green center -->
+    <line x1="120" y1="145" x2="250" y2="220"/>
+    <line x1="380" y1="145" x2="250" y2="220"/>
+    <!-- Gray verticals -->
+    <line x1="120" y1="145" x2="120" y2="295"/>
+    <line x1="380" y1="145" x2="380" y2="295"/>
+    <!-- Gray diagonals -->
+    <line x1="120" y1="145" x2="380" y2="295"/>
+    <line x1="380" y1="145" x2="120" y2="295"/>
+    <!-- Green center to gray lower -->
+    <line x1="250" y1="220" x2="120" y2="295"/>
+    <line x1="250" y1="220" x2="380" y2="295"/>
+    <!-- Gray lower row -->
+    <line x1="120" y1="295" x2="380" y2="295"/>
+    <!-- Gray lower to green bottom -->
+    <line x1="120" y1="295" x2="250" y2="370"/>
+    <line x1="380" y1="295" x2="250" y2="370"/>
+  </g>
+
+  <!-- Excluded nodes (gray with X) -->
+  <g filter="url(#glow)">
+    <circle cx="120" cy="145" r="20" fill="#2a3040" stroke="#4a5568" stroke-width="2"/>
+    <text x="120" y="152" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6b7280" text-anchor="middle" font-weight="bold">&#x2715;</text>
+
+    <circle cx="380" cy="145" r="20" fill="#2a3040" stroke="#4a5568" stroke-width="2"/>
+    <text x="380" y="152" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6b7280" text-anchor="middle" font-weight="bold">&#x2715;</text>
+
+    <circle cx="120" cy="295" r="20" fill="#2a3040" stroke="#4a5568" stroke-width="2"/>
+    <text x="120" y="302" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6b7280" text-anchor="middle" font-weight="bold">&#x2715;</text>
+
+    <circle cx="380" cy="295" r="20" fill="#2a3040" stroke="#4a5568" stroke-width="2"/>
+    <text x="380" y="302" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6b7280" text-anchor="middle" font-weight="bold">&#x2715;</text>
+  </g>
+
+  <!-- Independent set nodes (green with checkmark) -->
+  <g filter="url(#glow)">
+    <circle cx="250" cy="70" r="22" fill="#059669" stroke="#34d399" stroke-width="2.5"/>
+    <text x="250" y="78" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">&#x2713;</text>
+
+    <circle cx="250" cy="220" r="22" fill="#059669" stroke="#34d399" stroke-width="2.5"/>
+    <text x="250" y="228" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">&#x2713;</text>
+
+    <circle cx="250" cy="370" r="22" fill="#059669" stroke="#34d399" stroke-width="2.5"/>
+    <text x="250" y="378" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">&#x2713;</text>
+  </g>
+
+  <!-- Title text -->
+  <text x="250" y="438" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" fill="#e2e8f0" text-anchor="middle" font-weight="700">
+    Graph Independence
+  </text>
+  <text x="250" y="470" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#6ee7b7" text-anchor="middle" letter-spacing="3" font-weight="400">
+    AT SCALE
+  </text>
+
+</svg>
