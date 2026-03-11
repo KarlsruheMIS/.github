@@ -1,4 +1,4 @@
-# KarlsruheMIS — Graph Independence Problems at Scale
+# Graph Independence Problems at Scale
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/KarlsruheMIS/.github/main/profile/karlsruhemis-logo.png" alt="KarlsruheMIS Logo" width="256"/>
