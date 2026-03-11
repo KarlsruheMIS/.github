@@ -65,8 +65,9 @@ git clone https://github.com/KarlsruheMIS/DataReductions.git && cd DataReduction
 
 ### red2pack
 ```bash
-git clone --recursive https://github.com/KarlsruheMIS/red2pack.git && cd red2pack
-./compile_with_cmake.sh Release
-./deploy/red2pack_branch_and_reduce network.graph --output=packing.txt --time_limit=60
+brew install KarlsruheMIS/kamis/red2pack
+red2pack_branch_and_reduce network.graph --output=packing.txt --time_limit=60    # exact (unweighted)
+red2pack_heuristic network.graph --time_limit=60                                 # heuristic (unweighted)
+redw2pack_rnt_exact network.graph --output=packing.txt --time_limit=60           # exact (weighted)
 ```
 
