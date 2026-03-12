@@ -63,6 +63,13 @@ git clone https://github.com/KarlsruheMIS/DataReductions.git && cd DataReduction
 ./mwis_reduce -g network.graph --degree_one --domination --twin -v
 ```
 
+### HyperMIS
+```bash
+git clone https://github.com/KarlsruheMIS/HyperMIS.git && cd HyperMIS
+mkdir build && cd build && cmake .. && make
+./run_ilp -g instance.hgr -r -t 3600
+```
+
 ### red2pack
 ```bash
 brew install KarlsruheMIS/kamis/red2pack
